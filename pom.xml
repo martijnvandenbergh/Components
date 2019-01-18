@@ -1,0 +1,128 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>nl.berghm.projects</groupId>
+	<artifactId>Components</artifactId>
+	<version>5.0.0</version>
+	<packaging>pom</packaging>
+	<name>Components Project</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+<!--		<dependency>
+			<groupId>com.blueriq</groupId>
+			<artifactId>blueriq-customerdata-sql-store-application</artifactId>
+			<version>1.0.11</version>
+			<type>war</type>
+		</dependency> -->
+<!--  version=4.0.9
+groupId=com.blueriq
+artifactId=publisher  -->
+<!--		<dependency>
+			<groupId>download</groupId>
+			<artifactId>blueriq-publisher</artifactId>
+			<version>4.0.9</version>
+			<type>zip</type>
+		</dependency> -->
+<!--		<dependency>
+			<groupId>nl.rvo.upnl</groupId>
+			<artifactId>astest</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>war</type>
+		</dependency>
+		<dependency>
+			<groupId>nl.everest</groupId>
+			<artifactId>persistency-service</artifactId>
+			<version>2.0.1</version>
+			<type>war</type>
+		</dependency> -->
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>external.atlassian.jgitflow</groupId>
+				<artifactId>jgitflow-maven-plugin</artifactId>
+				<version>1.0-m5.1</version>
+				<configuration>
+					<!-- see goals wiki page for configuration options -->
+					<!-- <flowInitContext>
+						<masterBranchName>master</masterBranchName>
+						<developBranchName>development</developBranchName>
+						<featureBranchPrefix>feature-</featureBranchPrefix>
+						<releaseBranchPrefix>release-</releaseBranchPrefix>
+						<hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
+						<versionTagPrefix>version-</versionTagPrefix>
+					</flowInitContext> -->
+					<!-- <username>USERNAME_FOR_A_GIT_USER</username> -->
+					<!-- <password>PASSWORD_FOR_A_GIT_USER</password> -->
+					<!-- <noDeploy>true</noDeploy>
+					<squash>true</squash>
+					<scmCommentPrefix>[RELEASE] </scmCommentPrefix> -->
+				</configuration>
+			</plugin>
+
+<!--			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.5.4</version>
+				<executions>
+					<execution>	
+						<id>assemble-config</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<finalName>config-${project.version}</finalName>
+							<descriptors>
+								<descriptor>assembly.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			-->
+<!--			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.2</version>
+			</plugin>
+			<plugin> -->
+				<!-- This replaces matched properties in property files with maven properties -->
+				<!--<artifactId>maven-resources-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>resources</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>-->
+		</plugins>
+<!--		<resources>
+			<resource>
+				<directory>./home</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>-->
+	</build>
+
+<!--	<distributionManagement>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>artifactory-snapshots</name>
+			<url>http://artifactory2.everest.nl/artifactory/projects-snapshots-local</url>
+		</snapshotRepository>
+		<repository>-->
+			<!-- veld id "artifactory" moet overeenkomen met de artifactory in de 
+				servers sectie in de settings.xml -->
+			<!-- op de ci-onderhoud server staat deze file in de workspace -->
+			<!--<id>artifactory</id>
+			<name>artifactory-releases</name>
+			<url>http://artifactory2.everest.nl/artifactory/obvionportals-release-local</url>
+		</repository>
+	</distributionManagement>-->
+</project>
