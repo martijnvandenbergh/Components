@@ -3,7 +3,7 @@
 
 	<groupId>nl.berghm.projects</groupId>
 	<artifactId>Components</artifactId>
-	<version>5.0.0-SNAPSHOT</version>
+	<version>5.1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Components Project</name>
 
